@@ -1,0 +1,15 @@
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to top, #64315A,#B55D6B,#E67D7A,#F6B77B); */
+    /* background: linear-gradient(to top, #1e1e1e, #00ff87, #00aeef); */
+    background: linear-gradient(to top, #0A0A0A, #FF00FF, #0FF0FC);
+}
