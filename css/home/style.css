@@ -73,3 +73,46 @@
         aspect-ratio: 1/1.5;
     }
 }
+
+@media only screen and (min-width: 426px){
+    .container{
+        width: 90vw;
+        aspect-ratio: 1/.9;
+        flex-direction: row;
+        gap: 25px;
+        top: 8vh;
+    }
+    .bx{
+        height: 50%;
+    }
+    #bx1,#bx2{
+        background-size: 325px;
+        border: 5px solid grey;
+    }
+    .btn{
+        border-color: rgb(225, 225, 225);
+        position: absolute;
+        top: 80%;
+        transform: scale(1);
+    }
+    .btn:hover{
+        transform: scale(1.15);
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .container{
+        width: 80vw;
+        aspect-ratio: 1/.75;
+        top: 0vh;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .container{
+        top: -10vh;
+    }
+    #bx1,#bx2{
+        background-size: 460px;
+    }
+}
