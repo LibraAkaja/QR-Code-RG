@@ -1,12 +1,14 @@
 nav{
-    width: 100%;
+    width: 275px;
     height: 50px;
+    border-radius: 1rem;
     position: fixed;
-    top: 0;
+    top: 1vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: rgb(214, 214, 214);
+    color: white;
+    background: rgba(0, 255, 217, 0.1);
 }
 
 .links{
@@ -14,7 +16,7 @@ nav{
 }
 
 #l1{
-    left: -150px;
+    left: -110px;
     font-size: larger;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -33,25 +35,16 @@ nav{
 }
 
 @media only screen and (min-width: 321px){
+    nav{
+        width: 300px;
+    }
     #l1{
-        left: -175px;
+        left: -125px;
     }
     #l2{
         left: -75px;
     }
     #l3{
-        left: -50px;
-    }
-}
-
-@media only screen and (min-width: 376px){
-    #l1{
-        left: -200px;
-    }
-    #l2{
-        left: -100px;
-    }
-    #l3{
-        left: -75px;
+        left: -30px;
     }
 }
