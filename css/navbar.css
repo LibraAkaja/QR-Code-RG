@@ -9,24 +9,34 @@ nav{
     align-items: center;
     color: white;
     background: rgba(0, 255, 217, 0.1);
+    /* border: 2px solid black; */
 }
 
 .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    height: 35px;
+    width: 8ch;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    /* border: 2px solid black; */
 }
 
 #l1{
-    left: -110px;
+    left: -20px;
     font-size: larger;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 #l2{
-    left: -50px;
+    left: -15px;
 }
 
 #l3{
-    left: -25px;   
+    left: -10px;   
 }
 
 #l2,#l3{
@@ -39,28 +49,27 @@ nav{
         width: 300px;
     }
     #l1{
-        left: -125px;
+        left: -40px;
     }
     #l2{
-        left: -75px;
+        left: -25px;
     }
     #l3{
-        left: -30px;
+        left: -12px;
     }
 }
 
 @media only screen and (min-width: 476px){
     nav{
         transform: scale(1.5);
+        transform-origin: center;
         top: 10vh;
+        z-index: 1;
     }
 }
 
 @media only screen and (min-width: 769px){
     nav{
-        transform: scale(1.5);
         top: 5vh;
     }
 }
-
-
