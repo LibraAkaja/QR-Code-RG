@@ -13,3 +13,8 @@ body{
     /* background: linear-gradient(to top, #1e1e1e, #00ff87, #00aeef); */
     background: linear-gradient(to top, #0A0A0A, #FF00FF, #0FF0FC);
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
