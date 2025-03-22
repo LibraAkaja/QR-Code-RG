@@ -1,5 +1,4 @@
 import { navAnimation, mainPageAnimation} from "./animation.js";
-import { removeDElement } from "./dynamic.js";
 
 window.addEventListener("load",()=>{
     navAnimation();
