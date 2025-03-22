@@ -1,0 +1,21 @@
+*{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #0A0A0A, #FF00FF, #0FF0FC);
+    background-attachment: fixed;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
