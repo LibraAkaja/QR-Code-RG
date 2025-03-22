@@ -7,9 +7,9 @@ window.addEventListener("load",()=>{
 });
 
 document.querySelector("#btn1").addEventListener("click",()=>{
-    window.location.href = "/pages/generator.html"; 
+    window.location.href = "pages/generator.html"; 
 },{once:true});
 
 document.querySelector("#btn2").addEventListener("click",()=>{
-    window.location.href = "/pages/reader.html"; 
+    window.location.href = "pages/reader.html"; 
 },{once:true});
