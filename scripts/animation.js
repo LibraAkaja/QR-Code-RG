@@ -69,3 +69,26 @@ export function mainPageAnimation(){
         },6500);
     },15000);
 }
+
+/* Animation for page other than index page */
+export let otherIntervalID = null;
+export function otherPageAnimation(bx){
+    setTimeout(()=>{
+        changeCSS(bx.toString(),"transform","scale(1)");
+        changeCSS(bx.toString(),"transition","transform 0.5s ease");
+    },500);
+    setTimeout(()=>{
+        changeCSS(bx.toString(),"transform","scale(0.95)");
+        changeCSS(bx.toString(),"transition","transform 0.5s ease");
+    },2000);
+    otherIntervalID = setInterval(()=>{
+        setTimeout(()=>{
+            changeCSS(bx.toString(),"transform","scale(1)");
+            changeCSS(bx.toString(),"transition","transform 0.5s ease");
+        },500);
+        setTimeout(()=>{
+            changeCSS(bx.toString(),"transform","scale(0.95)");
+            changeCSS(bx.toString(),"transition","transform 0.5s ease");
+        },2000);
+    },5000);
+}
