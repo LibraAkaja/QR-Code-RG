@@ -12,6 +12,12 @@ export function createDElement(elementParent,elementType,className){
     parentE.appendChild(newElem);
 }
 
+/*Function to just create an element and not attach it on the document*/
+export function justCreateElement(elementType,className){
+    const newElem = document.createElement(elementType);
+    newElem.setAttribute("class",className);
+}
+
 /*Function to add text node to an element*/
 export function addText(elementParent, string){
     const parentE = document.querySelector(elementParent);
@@ -42,4 +48,9 @@ export function isCSS(e,prop, val){
     else{
         return false;
     }
+}
+
+/*Function that removes many elements at once*/
+export function removeElements(arr){
+    arr.forEach(e => document.querySelector(e).remove());
 }
