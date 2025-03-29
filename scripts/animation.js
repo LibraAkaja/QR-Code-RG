@@ -90,5 +90,5 @@ export function otherPageAnimation(bx){
             changeCSS(bx.toString(),"transform","scale(0.95)");
             changeCSS(bx.toString(),"transition","transform 0.5s ease");
         },2000);
-    },5000);
+    },7500);
 }
