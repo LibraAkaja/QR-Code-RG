@@ -1,0 +1,88 @@
+#bx2{
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    color: white;
+}
+
+.text4QR{
+    height: 40px;
+    width: 80%;
+    border-radius: 2rem;
+    border: none;
+    background: rgba(0, 238, 255, 0.25);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.text4QR::placeholder{
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.text4QR:focus{
+    outline: none;
+}
+
+.QRCGbtn{
+    height: 35px;
+    width: 9ch;
+    color: white;
+    border: 1px solid white;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.75rem;
+    background: rgba(0, 255, 200, 0.25);
+    cursor: pointer;
+}
+
+.QRCGbtn:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.qrContainer{
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.qrContainer img{
+    width: 100%;
+    aspect-ratio: 1;
+    filter: opacity(0.8);
+}
+
+.downloadContainer{
+    height: 45px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    background: linear-gradient(to bottom, rgba(255, 0, 255, 0.5), rgba(15, 240, 252,0.5));
+    position: absolute;
+    top: 79%;
+    left: 78%;
+    overflow: visible;
+    font-size: large;
+}
+
+.dIcon{
+    height: 100%;
+    aspect-ratio: 1;
+    background: url(../assets/icons/downloadIcon.svg) center no-repeat;
+    border: 2px solid white;
+}
+
