@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/reader.css">
 </head>
 <body>
     <nav>
@@ -16,11 +17,14 @@
     </nav>
     <div class="container">
         <div class="bx" id="bx2"></div>
-        <div class="bx" id="bx1" style="background: none;"></div>
+        <div class="bx" id="bx1" style="background: none;">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+        </div>
     </div>
+    <!-- <p id="output"></p> -->
     <script type="module" src="../scripts/animation.js"></script>
     <script type="module" src="../scripts/reader.js"></script>
     <script src="../scripts/dynamic.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> -->
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script></body>
 </html>
