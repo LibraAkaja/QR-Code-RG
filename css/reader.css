@@ -1,0 +1,14 @@
+#bx1{
+    border: none;
+}
+
+#canvas{
+    width: 100%;
+    aspect-ratio: 1;
+    display: none;
+}
+
+#video{
+    height: 100%;
+    aspect-ratio: 1;
+}
