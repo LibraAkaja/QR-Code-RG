@@ -31,6 +31,18 @@ document.querySelector(".QRCGbtn").addEventListener("click",()=>{
             changeCSS(".qrContainer","display","block");
             createDElement(".qrContainer","div","downloadContainer");
             createDElement(".downloadContainer","div","dIcon");
+            document.querySelector(".downloadContainer").addEventListener("click",()=>{
+                const canva = document.querySelector(".qrContainer canvas");
+                if(!canva){
+                    alert("Please generate the QR code first");
+                    return;
+                }
+                const image = canva.toDataURL("image/png");
+                const link = document.createElement("a");
+                link.href = image;
+                link.download = "QR-Code.png";
+                link.click();
+            });
         },10000);
     }
 });
