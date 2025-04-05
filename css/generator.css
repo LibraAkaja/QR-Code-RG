@@ -1,6 +1,7 @@
 #bx2{
     background: none;
     border: none;
+    border-radius: 0;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -53,7 +54,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.75rem;
     overflow: hidden;
 }
 
@@ -86,7 +86,11 @@
 }
 
 @media only screen and (min-width: 500px){
+    #bx2{
+        border-radius: 1rem;
+    }
     .qrContainer{
         border: 2px solid white;
+        border-radius: 0.75rem;
     }
 }
