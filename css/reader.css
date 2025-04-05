@@ -15,33 +15,38 @@
     border-radius: inherit;
 }
 
+#bx3{
+    display: none;
+}
+
 p{
     user-select: text;
-    z-index: 5;
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     color: white;
-    width: 25ch;
     text-align: center;
     overflow-wrap: break-word;
-    position: absolute;
-    top: 53%;
 }
 
-@media only screen and (min-width: 321px) {
+@media only screen and (min-width: 500px){
     p{
-        position: absolute;
-        top: 55%;
+        font-size: larger;
     }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 769px){
     p{
-        position: absolute;
+        font-size: x-large;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    p{
         width: 30ch;
-        top: 35%;
-        left: 55.5%;
     }
 }
+
+
+
 
 
