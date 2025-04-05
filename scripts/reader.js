@@ -1,4 +1,5 @@
 import { navAnimation, otherPageAnimation } from "./animation.js";
+import { changeCSS } from "./dynamic.js";
 
 window.addEventListener("load",()=>{
     navAnimation();
@@ -39,7 +40,7 @@ function scanQRCode(){
         return;  // Wait until the video has data
     }
 
-    canva.width = vid.videoWidth * 2; // Improve scanning accuracy
+    canva.width = vid.videoWidth * 2; 
     canva.height = vid.videoHeight * 2;
     context.drawImage(vid, 0, 0, canva.width, canva.height);
 
@@ -48,6 +49,10 @@ function scanQRCode(){
 
     if(code) {
         output.textContent = `QR Code: ${code.data}`;
+        changeCSS("#bx1","display","none");
+        changeCSS("#bx3","display","flex");
+        changeCSS("#bx3","justify-content","center");
+        changeCSS("#bx3","align-items","center"); 
         stopCamera();
     } else {
         requestAnimationFrame(scanQRCode);
