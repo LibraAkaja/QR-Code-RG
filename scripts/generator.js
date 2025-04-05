@@ -41,7 +41,7 @@ function generateQR(qrText){
     qrContainer.innerHTML = "";
     new QRCode(qrContainer,{
         text: qrText,
-        width: rect.width,
-        height: rect.height,
+        width: Math.ceil(rect.width),
+        height: Math.ceil(rect.height),
     });    
 }
