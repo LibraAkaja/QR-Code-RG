@@ -78,6 +78,11 @@
     font-size: large;
 }
 
+.downloadContainer:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
 .dIcon{
     height: 100%;
     aspect-ratio: 1;
