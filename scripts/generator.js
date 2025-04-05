@@ -37,10 +37,11 @@ document.querySelector(".QRCGbtn").addEventListener("click",()=>{
 
 function generateQR(qrText){
     const qrContainer = document.querySelector(".qrContainer");
+    const rect = qrContainer.parentElement.getBoundingClientRect();
     qrContainer.innerHTML = "";
     new QRCode(qrContainer,{
         text: qrText,
-        width: 200,
-        height: 200,
+        width: rect.width,
+        height: rect.height,
     });    
 }
