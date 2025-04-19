@@ -12,6 +12,7 @@ const context = canva.getContext("2d", { willReadFrequently: true });
 const output = document.getElementById("output");
 
 let cameraActive = false;
+let alreadyScanned = false;
 
 // Function to access camera and start video stream
 async function startCamera() {
@@ -33,6 +34,16 @@ async function startCamera() {
 
 let scanning = false;
 
+function isValidURL(str){
+    try{
+        const url = new URL(str);
+        return url.protocol === "http:" || url.protocol === "https:";
+    }
+    catch(_) {
+        return false;
+    }
+}
+
 // Function to start QR code scanning
 function scanQRCode(){
     if(vid.readyState !== vid.HAVE_ENOUGH_DATA){
@@ -47,13 +58,21 @@ function scanQRCode(){
     const imageData = context.getImageData(0, 0, canva.width, canva.height);
     const code = jsQR(imageData.data, imageData.width, imageData.height);
 
-    if(code) {
-        output.textContent = `QR Code: ${code.data}`;
+    if(code && !alreadyScanned) {
+        console.log("QR detected: ",code);
+        alreadyScanned = true;
+        const scannedText = code.data;
+        output.textContent = `QR Code: ${scannedText}`;
         changeCSS("#bx1","display","none");
         changeCSS("#bx3","display","flex");
         changeCSS("#bx3","justify-content","center");
         changeCSS("#bx3","align-items","center"); 
         stopCamera();
+        if(isValidURL(scannedText)){
+            setTimeout(()=>{
+                window.location.href = scannedText;
+            },1000);
+        }
     } else {
         requestAnimationFrame(scanQRCode);
     }
